@@ -1,0 +1,195 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background: $color-bg-main;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+
+    @include mq(m) {
+        
+    }
+
+}
+
+
+.header__inner {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    max-width: 1032px;
+    padding: 0 16px;
+    margin: 0 auto;
+    height: 100%;
+
+    @include mq (m) {
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 100px;
+        line-height: 53px;
+        margin-right: 60px;
+        height: inherit;
+
+        @include mq (m) {
+            padding: 0;
+            width: 80px;
+            margin: 0;
+            line-height: 31px;
+        }
+
+        a {
+            display: block;
+            height: inherit;
+        }
+    }
+
+    .header__nav_inner {
+        height: inherit;
+        line-height: 80px;
+        @include mq (m) {
+            line-height: 35px;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            height: inherit;
+        }
+
+        li {
+            padding-right: 30px;
+            font-size: 1.4rem;
+            font-size: $font-size-normal;
+            height: inherit;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            @include mq(s) {}
+        }
+        a{
+            display: inline-block;
+            height: inherit;
+        }
+    }
+
+
+
+
+}
+
+// btn   ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.header__btn {
+    margin-left: auto;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    height: 80px;
+    line-height: 80px;
+    background: #000;
+
+    .header__btn_link {
+        background: #000;
+        width: 100%;
+        display: inline-block;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    @include mq (m) {
+        display: none;
+    }
+
+}
+
+// first-viewーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+// メインビジュアルを画面の高さに合わせる
+// headerの高さが80pxあるので、100vhから80px分だけマイナスする
+.mainvisual {
+    @include mq(s) {
+        // margin-bottom: 70px;
+    }
+
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+}
+
+.mainvisual .mask {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .25);
+}
+
+
+.copy-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.copy-wrapper h2 {
+    font-size: 72px;
+    letter-spacing: .1em;
+    display: flex;
+    will-change: transform, opacity;
+    overflow: hidden;
+}
+
+.copy-wrapper span {
+    display: block;
+    will-change: transform, opacity;
+    font-weight: 600;
+}
+
+.copy-wrapper h2 .pad {
+    padding-left: 12px;
+}
+
+.copy-wrapper p {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    overflow: hidden;
+}
+
+.copy-wrapper p {
+    display: flex;
+}
+
+.copy-wrapper span {
+    display: block;
+}
+
+
+.copy-wrapper .copy {
+    font-size: clamp(44px, 7vw, 72px);
+}
+
+.copy-wrapper .copy-small {
+    font-size: clamp(31px, 4.9vw, 50px);
+}

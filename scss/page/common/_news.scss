@@ -1,0 +1,71 @@
+//   news  ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.news {
+
+    @include mq (m) {
+        // margin-top: 80px;
+    }
+}
+
+    .news__list {
+        margin-top: 87px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq (m) {
+            flex-direction: column;
+            margin-top: 59px;
+        }
+    }
+
+    .news__textBox {
+        padding: 10px 20px;
+        width: calc(100%/3);
+        position: relative;
+        @include mq (m) {
+            width: 100%;
+                }
+
+        &:first-child {
+            padding-left: 0px;
+        }
+
+        &:last-child {
+            padding-right: 0px;
+        }
+        
+        &:not(:first-child){
+            border-left: 1px solid $color-underLine;
+            @include mq (m) {
+                border-left: 0px;
+                padding-left: 0px;
+                margin-top: 20px;
+            }
+        }
+
+        
+        .news__time {
+            font-size: $font-size-normal;
+        }
+        
+        .news__text {
+            font-size: $font-size-normal;
+            margin-top: 16px;
+            @include mq (m) {
+                margin-top: 22px;
+            }
+        }
+        
+        .news__tag {
+            font-size: $font-size-tag;
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            background-color: $color-tag-bg;
+            display: inline-block;
+            margin-left: 10px;
+            text-align: center;
+            color: $color-tag-font;
+        }
+        
+    }

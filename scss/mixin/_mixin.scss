@@ -1,0 +1,30 @@
+
+// レスポンシブメディアクエリ設定ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+// 変数指定 inner初期値のレイアウト幅設定
+// 変数無し
+
+// ブレークポイントスマホ幅設定
+// マップ型変数breakpointsを定義
+// minは
+// maxは
+$breakpoints: ("xl": "screen and (min-width: 1280px)",
+    "l": "screen and (max-width:1279px)",
+    "lm": "screen and (max-width:1000px)",
+    "m": "screen and (max-width:900px)",
+    "s": "screen and (max-width: 767px)",
+    "ss": "screen and (max-width: 650px)",
+    "xs": "screen and (max-width: 500px)",
+    "xxx": "screen and (max-width: 400px)",
+);
+
+// メディアクエリー @includeは → mq(sp)でスマホ
+//出力コピぺ→     @include mq(sp){}
+
+// メディアクエリ用のmixinを定義。デフォ値はpc
+@mixin mq($breakpoint:l) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+

@@ -1,0 +1,103 @@
+.company {}
+
+.company__inner {
+    position: relative;
+    padding: 0;
+    @include mq (lm) {
+        padding: 0 16px; 
+
+    }
+}
+
+.company__textBox {
+    padding: 100px 8% 100px 6%;
+    width: 100%;
+    max-width: 568px;
+    background-color: $color-bg-white;
+    @include mq (lm) {
+        max-width: 100%;
+        padding: 40px 20px;
+        
+    }
+    .company__section_title {
+        .company__section_titleEn {}
+
+
+        .company__section_titleJp {}
+
+    }
+
+}
+
+
+.company__info {
+    margin-top: 78px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include mq (m) {
+        flex-direction: column;
+        margin-top: 55px;
+    }
+
+
+    
+    dt,
+    dd {
+        line-height: 2.2;
+        font-size: $font-size-normal;
+        // margin-top: 10px;
+        @include mq (m) {
+        line-height: 1.9;
+        }
+    }
+    dt {
+        width: 20%;
+        &:not(:first-child){
+
+            @include mq (m) {
+            margin-top: 15px;
+            }
+        }
+    }
+
+    dd {
+        width: 80%;
+        @include mq (m) {
+        padding-left: 14px;
+        }
+    }
+
+    p {
+        line-height: 2.2;
+
+        @include mq(m) {
+            line-height: 1.8;
+        }
+    }
+
+
+}
+
+.company__img {
+    position: absolute;
+    content: '';
+    top: 51.5%;
+    right: 0;
+    width: 53%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    height: 400px;
+    
+    @include mq (lm) {
+        position: static;
+        transform: translate(0);
+        width: 100%;
+        margin-top: 20px;
+    }
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}

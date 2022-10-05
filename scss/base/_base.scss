@@ -1,0 +1,148 @@
+
+// 全体共通ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+//(tips).is-pc  .is-sp というクラスを付けて
+// 各クラスがついてる時には表示させないようにしておく
+// spの時にはpcは表示させないとしておく
+
+// 767px以下
+@include mq (s) {
+    .is-s {
+        display: none;
+    }
+}
+// 900px以下
+@include mq (m) {
+    .is-m {
+        display: none;
+    }
+}
+// 1000px以下
+@include mq (lm) {
+    .is-m {
+        display: none;
+    }
+}
+// 1279px以下
+@include mq (l) {
+    .is-l {
+        display: none;
+    }
+}
+// 1280px以上
+@include mq (xl) {
+    .is-xl {
+        display: none;
+    }
+}
+
+*,
+*::before,
+*::after {
+    // 幅を指定した時padding、border含めて計算してくれる
+    box-sizing: border-box;
+}
+
+
+
+// 基本共通ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+html {
+
+}
+
+body {
+    background-color: $color-bg-main;
+    // font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-nomal;
+    color: $color-font-black;
+    font-family: $font-family-gothic;
+}
+p{
+    // font-size: $font-size-normal;
+}
+
+a {
+    text-decoration: none;
+    color: $color-font-black;
+}
+
+img {
+width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+
+main {
+
+    @include mq (s) {
+    }
+}
+.section__inner{
+    width: 100%;
+    max-width: 1032px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+.section {
+    margin-top: 120px;
+
+    @include mq (m) {
+        margin-top: 80px;
+    }
+}
+
+.section__titleJp{
+margin-top: 10px;
+position: relative;
+&::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+    font-size: $font-size-normal;
+    @include mq (m) {
+     bottom: -24px;   
+    }
+}
+}
+
+.section__titleEn{
+    font-size: $font-size-section-titleEn;
+    letter-spacing: 0.3em;
+    font-family: $font-family-english;
+}
+
+.section__titleJp{
+    font-size: $font-size-section-titleJp;
+    font-weight: 700;
+}
+
+
+
+// 飛び出していて謎の余白が発生した時使用
+// * {
+//     outline: 2px solid red;
+// }
+
+//パンくず ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.breadcrumb_inner {
+    max-width: 1280px;
+    width: 100%;
+    text-align: left;
+    padding-left: 90px;
+
+    @include mq (s) {
+        padding-left: 20px;
+    }
+}
+
+

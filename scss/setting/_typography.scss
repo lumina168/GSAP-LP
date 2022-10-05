@@ -1,0 +1,29 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * font-family
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+// @import url('https://fonts.googleapis.com/css2?family=hoge');
+$font-family-english: 'Lato', sans-serif; 
+// @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+// $font-family-alumi: 'Alumni Sans Inline One', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap');
+$font-family-gothic: 'Zen Kaku Gothic Antique', sans-serif;
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * font-size
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+// $font-size-section-titleEn:36px;
+$font-size-section-titleJp:14px;
+$font-size-section-titleEn:clamp(32px,6vw,44px);
+
+
+$font-size-normal:14px;
+
+
+$font-size-nav:14px;
+$font-size-tag:12px;
+$font-size-copyright:10px;
+
+
+$font-weight-nomal:500;
+

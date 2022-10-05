@@ -1,0 +1,64 @@
+//   footerーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.footer {
+    margin-top: 135px;
+    background: #fff;
+    width: 100%;
+    padding: 0 16px;
+
+    @include mq(lm) {
+        margin-top: 0;
+        padding-bottom: 20px;
+    }
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    align-items: center;
+
+    @include mq(lm) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.footer__left {
+    display: block;
+
+    .footer__logo_title {
+        width: 100px;
+
+        @include mq(lm) {
+            width: 80px;
+            padding: 0;
+            margin: 8px 0;
+        }
+    }
+
+}
+
+.footer__right {
+    p {
+        font-size: $font-size-normal;
+        line-height: 1.5;
+    }
+}
+
+
+.copyright {
+    font-size: $font-size-copyright;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+
+
+    @include mq(lm) {
+        padding-bottom: 0;
+    }
+
+}
